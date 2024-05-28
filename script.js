@@ -35,3 +35,23 @@ ScrollReveal().reveal(".feature-card", {
     duration: 1000,
     interval: 500,
 });
+
+ScrollReveal().reveal(".music-image img", {
+    ...scrollRevealOption,
+    origin: "left",
+});
+
+ScrollReveal().reveal(".music-content .section-header", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+
+ScrollReveal().reveal(".music-content p", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+
+ScrollReveal().reveal(".music-content .music-btn", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
