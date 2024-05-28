@@ -31,3 +31,7 @@ ScrollReveal().reveal(".header-content .header-btn", {
     delay: 1500,
 });
 
+ScrollReveal().reveal(".feature-card", {
+    duration: 1000,
+    interval: 500,
+});
