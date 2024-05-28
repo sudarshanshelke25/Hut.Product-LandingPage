@@ -368,6 +368,26 @@ nav {
   margin-inline: auto;
 }
 
+.footer-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1;
+  text-align: center;
+}
+
+.footer-logo {
+  grid-area: 1/1/2/4;
+}
+
+.footer-links li:not(.footer-logo) a {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.footer-links li:not(.footer-logo) a:hover {
+  color: var(--secondary-color);
+}
 
 @media (width > 540px) {
   .feature-grid {
@@ -470,7 +490,11 @@ nav {
     text-align: left;
   }
 
-  
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
 @media (width > 1200px) {
