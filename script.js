@@ -55,3 +55,8 @@ ScrollReveal().reveal(".music-content .music-btn", {
     ...scrollRevealOption,
     delay: 1500,
 });
+
+const swiper = new Swiper(".swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 0
+});
