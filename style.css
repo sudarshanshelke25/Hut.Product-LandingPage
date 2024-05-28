@@ -300,6 +300,74 @@ nav {
   color: var(--text-light);
 }
 
+.discount {
+  overflow: hidden;
+}
+
+.discount-container {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: 4rem 2rem;
+}
+
+.discount-container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.discount-container .discount-bg {
+  display: none;
+}
+
+.discount-content .section-header{
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.discount-content p{
+  margin-bottom: 2rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.discount-btn {
+  text-align: center;
+}
+
+.discount-image {
+  position: relative;
+  isolation: isolate; 
+}
+
+.discount-image::after {
+  position: absolute;
+  content: "10% Discount";
+  padding-block: 0.5rem;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+
+.discount-image img {
+  max-width: 350px;
+  margin-inline: auto;
+}
+
 
 @media (width > 540px) {
   .feature-grid {
@@ -382,6 +450,24 @@ nav {
   .music-btn {
     max-width: 350px;
     margin-inline: auto;
+  }
+
+  .discount-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .discount-container .discount-bg {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10rem;
+    z-index: 1;
+  }
+
+  .discount-content :is(.section-header, p, .discount-btn){
+    text-align: left;
   }
 
   

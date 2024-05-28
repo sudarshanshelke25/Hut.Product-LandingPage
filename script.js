@@ -60,3 +60,24 @@ const swiper = new Swiper(".swiper", {
     slidesPerView: "auto",
     spaceBetween: 0
 });
+
+ScrollReveal().reveal(".discount-image img", {
+    ...scrollRevealOption,
+    origin: "right",
+});
+
+ScrollReveal().reveal(".discount-content .section-header", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+
+ScrollReveal().reveal(".discount-content p", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+
+ScrollReveal().reveal(".discount-content .discount-btn", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
+
